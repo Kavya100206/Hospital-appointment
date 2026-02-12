@@ -1,0 +1,33 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://YOUR_DATABASE_HOST:5432/YOUR_DATABASE_NAME?sslmode=require
+    username: YOUR_DATABASE_USERNAME
+    password: YOUR_DATABASE_PASSWORD
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  mail:
+    host: smtp.mailtrap.io  # or smtp.gmail.com for Gmail
+    port: 2525              # 587 for Gmail with TLS
+    username: YOUR_EMAIL_USERNAME
+    password: YOUR_EMAIL_PASSWORD
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  secret: YOUR_JWT_SECRET_KEY_MINIMUM_256_BITS_LONG_FOR_HS256_ALGORITHM
+  expiration: 86400000  # 24 hours in milliseconds

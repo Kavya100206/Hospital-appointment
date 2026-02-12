@@ -1,0 +1,11 @@
+package com.example.hospital.model;
+
+public enum NotificationType {
+    APPOINTMENT_CONFIRMATION,
+    APPOINTMENT_REMINDER_24H,
+    APPOINTMENT_REMINDER_1H,
+    APPOINTMENT_CANCELLED,
+    APPOINTMENT_RESCHEDULED,
+    WELCOME,
+    PASSWORD_RESET
+}
