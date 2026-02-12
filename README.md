@@ -154,11 +154,44 @@ The API will be available at `http://localhost:8081`
 
 ## API Documentation
 
-Once the application is running, access the interactive API documentation:
+### Interactive Swagger UI
 
-**Swagger UI**: `http://localhost:8081/swagger-ui/index.html`
+This project includes **comprehensive API documentation** using Swagger/OpenAPI 3.0. Once the application is running, you can explore and test all endpoints interactively.
 
-**H2 Console** (if using H2): `http://localhost:8081/h2-console`
+**Access Swagger UI:**
+```
+http://localhost:8081/swagger-ui/index.html
+```
+
+**OpenAPI JSON Specification:**
+```
+http://localhost:8081/v3/api-docs
+```
+
+### Features of Swagger Documentation:
+- **Interactive API Testing**: Test all endpoints directly from the browser
+- **JWT Authentication Support**: Built-in authorization with Bearer token
+- **Request/Response Examples**: See sample payloads for all endpoints
+- **Schema Definitions**: View all DTOs and model structures
+- **Try It Out**: Execute real API calls and see live responses
+
+### How to Use Swagger:
+1. Start the application
+2. Open `http://localhost:8081/swagger-ui/index.html` in your browser
+3. Click "Authorize" button (top right)
+4. Login via `/api/auth/login` to get JWT token
+5. Enter `Bearer YOUR_JWT_TOKEN` in the authorization dialog
+6. Test any protected endpoint with authentication
+
+### H2 Database Console (Development Only)
+
+If using H2 database, access the web console:
+```
+http://localhost:8081/h2-console
+```
+- **JDBC URL**: `jdbc:h2:file:./data/hospitaldb`
+- **Username**: `sa`
+- **Password**: (leave blank)
 
 ---
 
